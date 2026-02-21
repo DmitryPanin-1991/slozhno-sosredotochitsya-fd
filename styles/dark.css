@@ -4,19 +4,20 @@
   переключая тему
 */
 :root {
+  
 }
 
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    чем стили в медиазапросе предпочтений пользователя*/
+  
   --bg-image: url("../images/cover-image-dark.png");
   --bg-color: #000028;
   --logo_color: #db00ff;
   --shadow_color: #ff0070;
-  --title-1_color: #ff0070;
-  --title_color: #000028;
+  --title_color: #ff0070;
+  --title-accent_color: #000028;
   --title_bg-color: #ff0070;
   --main-text: #f1b2ce;
   --decor-color: #ff0070;
