@@ -24,8 +24,7 @@ html {
   font-weight: 400;
 }
 
-.header,
-.footer {
+.decorated-zone {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -43,7 +42,6 @@ html {
   flex-direction: column;
   justify-content: space-between;
   inline-size: 100%;
-  block-size: 163px;
 }
 
 .header_rec {
@@ -53,6 +51,7 @@ html {
   opacity: var(--rec-opacity);
   align-self: flex-end;
   margin-inline-end: 28px;
+  margin-block-end: 39px;
 }
 
 .header_rec::after {
@@ -269,14 +268,16 @@ html {
     min-inline-size: 768px;
   }
 
-  .header,
-  .footer {
+  .decorated-zone {
     padding: 20px;
   }
 
   .header_rec-and-menu {
     inline-size: 100%;
-    block-size: 270px;
+  }
+
+  .header_rec {
+    margin-block-end: 146px;
   }
 
   .title {
@@ -330,21 +331,13 @@ html {
 
 @media (width >= 1024px) {
   .page {
-    gap: 60px;
     min-inline-size: 1024px;
-  }
-
-  .header,
-  .footer {
-    padding: 20px;
   }
 
   .header_rec-and-menu {
     flex-direction: row-reverse;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    inline-size: 100%;
   }
 
   .header_rec {
@@ -352,7 +345,7 @@ html {
     grid-row: 1;
     align-self: start;
     justify-self: end;
-    margin-inline-end: 28px;
+    margin-block-end: 0;
   }
 
   .header__theme-menu {
@@ -365,28 +358,12 @@ html {
     gap: 15px;
   }
 
-  .title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-inline-start: -20px;
-  }
-
   .header_card {
     max-inline-size: 491px;
   }
 
-  .main {
-    padding: 0 20px;
-    gap: 80px;
-  }
-
   .main_card {
-    display: grid;
     grid-template-columns: 315px 1fr;
-    column-gap: 20px;
-  }
-
-  .main_card_text:last-of-type {
-    margin-block-end: 0;
   }
 
   .main_card_list-special-column {
@@ -394,29 +371,5 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
-
-  .main_card_list-img {
-    display: grid;
-    gap: 20px;
-    margin-block-start: 10px;
-  }
-
-  .main_card_title-accent-mod {
-    margin-block-end: 20px;
-  }
-
-  .footer_title {
-    margin-inline-start: 0;
-  }
-
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
   }
 }
